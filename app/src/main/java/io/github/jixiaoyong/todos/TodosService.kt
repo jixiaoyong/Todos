@@ -32,7 +32,7 @@ interface TodosService {
 
     @FormUrlEncoded
     @POST("content/query")
-    fun queryAllByToken(@Field("token") token: String): Observable<ResultContentQuery>
+    fun queryAllByToken(@Field("token") token: String): Observable<HttpResult<ContentBean>>
 
     @FormUrlEncoded
     @POST("content/add")

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Todos</string>
+    <string name="username">user name</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="app_copyright" translatable="false">Ramen.GQ All right reserved 2018</string>
 </resources>
