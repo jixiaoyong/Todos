@@ -23,11 +23,11 @@ public class User {
 
     @NotNull
     private String username;
-    private int date;
+    private Long date;
     private String token;
     private String email;
 
-    public User( @NotNull String username, int date, String token,
+    public User( @NotNull String username, Long date, String token,
                  String email) {
         this.username = username;
         this.date = date;
@@ -35,8 +35,8 @@ public class User {
         this.email = email;
     }
 
-@Generated(hash = 1580086700)
-public User(Long id, @NotNull String username, int date, String token,
+@Generated(hash = 806324503)
+public User(Long id, @NotNull String username, Long date, String token,
         String email) {
     this.id = id;
     this.username = username;
@@ -65,11 +65,11 @@ public void setUsername(String username) {
     this.username = username;
 }
 
-public int getDate() {
+public Long getDate() {
     return this.date;
 }
 
-public void setDate(int date) {
+public void setDate(Long date) {
     this.date = date;
 }
 

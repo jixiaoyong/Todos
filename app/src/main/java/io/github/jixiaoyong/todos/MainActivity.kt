@@ -91,14 +91,14 @@ class MainActivity : AppCompatActivity() {
                 p0.itemView.author.text = mShowContents[p1].username
                 p0.itemView.content.text = mShowContents[p1].content
                 p0.itemView.tags.text = mShowContents[p1].tag //todo 记得更改为复数
-                p0.itemView.state.text =  when {
+                p0.itemView.state.text = when {
                     mShowContents[p1].state == 0 -> getString(R.string.state_private)
                     mShowContents[p1].state == 1 -> getString(R.string.state_check)
                     else -> getString(R.string.state_public)
                 }
 
-                var simpleDataFormat = SimpleDateFormat("yyyy-MM-DD HH:mm")
-                p0.itemView.time.text = simpleDataFormat.format(mShowContents[p1].date)
+                var simpleDataFormat = SimpleDateFormat("yyyy-MM-dd HH:mm")
+                p0.itemView.time.text = simpleDataFormat.format(mShowContents[p1].date * 1000)
                 p0.itemView.setOnClickListener {
                     var intent = Intent(mContext, ViewContentActivity::class.java)
                     intent.putExtra("title", mShowContents[p1].title)

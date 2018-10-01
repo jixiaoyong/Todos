@@ -4,6 +4,10 @@ import android.os.Bundle
 import io.github.jixiaoyong.todos.bean.ContentBean
 import kotlinx.android.synthetic.main.activity_content_view.*
 import java.text.SimpleDateFormat
+import android.webkit.WebView
+import android.webkit.WebViewClient
+
+
 
 /**
  * author: jixiaoyong
@@ -20,7 +24,7 @@ class ViewContentActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_content_view)
 
-        content = ContentBean(intent.getIntExtra("date",0),
+        content = ContentBean(intent.getLongExtra("date",0),
                 intent.getLongExtra("userId",0),
                 intent.getStringExtra("tag"),
                 intent.getIntExtra("state",0),
@@ -33,6 +37,13 @@ class ViewContentActivity : BaseActivity() {
 
         initView()
 
+        web_view.webViewClient = object : WebViewClient() {
+            override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
+                view.loadUrl(url)
+                return true
+            }
+        }
+
         if (!content.url.isNullOrEmpty()) {
             web_view.loadUrl(content.url)
         }
@@ -42,7 +53,7 @@ class ViewContentActivity : BaseActivity() {
         content_title.text = content.title
         author.text = content.username
         tag.text = content.tag
-        time.text = SimpleDateFormat("YYYY-MM-dd HH:mm").format(content.date)
+        time.text = SimpleDateFormat("YYYY-MM-dd HH:mm").format(content.date * 1000)
         state.text = when {
             content.state == 0 -> getString(R.string.state_private)
             content.state == 1 -> getString(R.string.state_check)

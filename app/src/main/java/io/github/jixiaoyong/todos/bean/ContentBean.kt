@@ -3,7 +3,7 @@ package io.github.jixiaoyong.todos.bean
 import com.google.gson.annotations.SerializedName
 
 data class ContentBean(@SerializedName("date")
-                       var date: Int = 0,
+                       var date: Long = 0,
                        @SerializedName("user_id")
                        var userId: Long = 0,
                        @SerializedName("tag")

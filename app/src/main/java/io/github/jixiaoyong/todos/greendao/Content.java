@@ -30,11 +30,11 @@ public class Content {
     private String tag;
     private String url;
     private int state;
-    private int date;
+    private long date;
 
     public Content(long conetnt_id, long user_id, String username,
                    String title, String content, String tag, String url, int state,
-                   int date) {
+                   long date) {
         this.conetnt_id = conetnt_id;
         this.user_id = user_id;
         this.username = username;
@@ -46,10 +46,10 @@ public class Content {
         this.date = date;
     }
 
-@Generated(hash = 732698304)
+@Generated(hash = 152900946)
 public Content(Long id, long conetnt_id, long user_id, String username,
         String title, String content, String tag, String url, int state,
-        int date) {
+        long date) {
     this.id = id;
     this.conetnt_id = conetnt_id;
     this.user_id = user_id;
@@ -138,11 +138,11 @@ public void setState(int state) {
     this.state = state;
 }
 
-public int getDate() {
+public long getDate() {
     return this.date;
 }
 
-public void setDate(int date) {
+public void setDate(long date) {
     this.date = date;
 }
 }
