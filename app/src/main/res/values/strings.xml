@@ -6,4 +6,13 @@
     <string name="register">Register</string>
     <string name="confirm_password">confirm password</string>
     <string name="app_copyright" translatable="false">Ramen.GQ All right reserved 2018</string>
+    <string name="email">email</string>
+    <string name="email_format_error">Email format error</string>
+    <string name="password_too_short">Password must be greater than 6</string>
+    <string name="password_too_long">Password must be shorter than 30</string>
+    <string name="password_cant_empty">Password can\'t empty</string>
+    <string name="password_is_different">Password is different</string>
+    <string name="username_cant_empty">User name can\'t empty</string>
+
+    <string name="please_checkout_the_username_password">Please check if the account password is set correctly.</string>
 </resources>

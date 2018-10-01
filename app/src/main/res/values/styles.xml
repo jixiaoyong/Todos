@@ -14,10 +14,22 @@
     </style>
 
     <style name="ButtonIphoneStyle" parent="Widget.AppCompat.Button.Borderless">
-        <item name="android:shadowRadius">0</item>
         <item name="android:textSize">22sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@drawable/btn_text_bg_select</item>
         <item name="android:background">@drawable/btn_bg_select</item>
     </style>
+
+    <!--错误提示信息-->
+    <style name="errorAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+    <!--超出计数最大长度,浮动标签,下划线,计数文字都会改变颜色-->
+    <style name="counterOverflowTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+    </style>
+
 </resources>

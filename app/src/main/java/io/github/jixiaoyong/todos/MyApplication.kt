@@ -3,6 +3,7 @@ package io.github.jixiaoyong.todos
 import android.app.Application
 import io.github.jixiaoyong.todos.greendao.DaoMaster
 import io.github.jixiaoyong.todos.greendao.DaoSession
+import io.github.jixiaoyong.todos.widget.BaseDialog
 import io.github.jixiaoyong.todos.widget.LogUtils
 import io.github.jixiaoyong.todos.widget.Toast
 
