@@ -8,5 +8,18 @@
     <string name="confirm_password">确认密码</string>
     <string name="email">邮箱</string>
     <string name="password_too_short">密码至少6位</string>
+    <string name="email_format_error">邮箱格式错误</string>
+    <string name="password_too_long">密码长度必须小于30</string>
+    <string name="password_cant_empty">密码不能为空</string>
+    <string name="password_is_different">密码不一样</string>
+    <string name="username_cant_empty">用户名不能为空</string>
+    <string name="please_checkout_the_username_password">请检查你的账户密码是否正确</string>
+    <string name="index">主页</string>
+    <string name="edit">新增</string>
+    <string name="discover">发现</string>
+    <string name="online_content_start">网页内容由此开始</string>
+    <string name="state_private">私有</string>
+    <string name="state_check">审核中</string>
+    <string name="state_public">公开</string>
 
 </resources>

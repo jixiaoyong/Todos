@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_index"
+        android:title="@string/index"
+        android:icon="@drawable/ic_list" />
+
+    <item
+        android:id="@+id/menu_edit"
+      />
+
+    <item
+        android:id="@+id/menu_discover"
+        android:title="@string/discover"
+        android:icon="@drawable/ic_discover" />
+</menu>

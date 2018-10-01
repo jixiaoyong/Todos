@@ -3,20 +3,20 @@ package io.github.jixiaoyong.todos.bean
 import com.google.gson.annotations.SerializedName
 
 data class ContentBean(@SerializedName("date")
-                    val date: Int = 0,
+                       var date: Int = 0,
                        @SerializedName("user_id")
-                    val userId: Long = 0,
+                       var userId: Long = 0,
                        @SerializedName("tag")
-                    val tag: String? = null,
+                       var tag: String? = null,
                        @SerializedName("state")
-                    val state: Int = 0,
+                       var state: Int = 0,
                        @SerializedName("conetnt_id")
-                    val conetntId: Long = 0,
+                       var conetntId: Long = 0,
                        @SerializedName("title")
-                    val title: String = "",
+                       var title: String = "",
                        @SerializedName("content")
-                    val content: String = "",
+                       var content: String = "",
                        @SerializedName("url")
-                    val url: String? = null,
+                       var url: String? = null,
                        @SerializedName("username")
-                    val username: String = "")
+                       var username: String = "")

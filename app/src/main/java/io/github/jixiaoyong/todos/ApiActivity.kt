@@ -19,6 +19,7 @@ import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.activity_api.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.item_content_rv.view.*
 import org.greenrobot.greendao.query.Query
@@ -31,8 +32,7 @@ import org.greenrobot.greendao.query.Query
  * date: 2018/9/27
  * description: todo
  */
-class ApiActivity : AppCompatActivity() {
-
+class ApiActivity : BaseActivity() {
 
     private lateinit var mTodosService: TodosService
     private lateinit var mContext: Context
@@ -48,7 +48,7 @@ class ApiActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_api)
         mContext = this
 
         mTodosService = RetrofitManager.retrofit.create(TodosService::class.java)

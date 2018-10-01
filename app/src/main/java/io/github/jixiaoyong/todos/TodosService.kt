@@ -22,17 +22,25 @@ interface TodosService {
 
     @FormUrlEncoded
     @POST("user/login")
-    fun login(@Field("username") username: String, @Field("password") password: String)
+    fun login(@Field("username") username: String,
+              @Field("password") password: String)
             : Observable<ResultUserLogin>
 
     @FormUrlEncoded
     @POST("user/register")
-    fun register(@Field("username") username: String, @Field("password") password: String,
+    fun register(@Field("username") username: String,
+                 @Field("password") password: String,
                  @Field("email") email: String?): Observable<ResultUserRegister>
 
     @FormUrlEncoded
     @POST("content/query")
     fun queryAllByToken(@Field("token") token: String): Observable<HttpResult<ContentBean>>
+
+    @FormUrlEncoded
+    @POST("content/query")
+    fun queryPublic(@Field("token") token: String,
+                    @Field("state") state: Int)
+            : Observable<HttpResult<ContentBean>>
 
     @FormUrlEncoded
     @POST("content/add")

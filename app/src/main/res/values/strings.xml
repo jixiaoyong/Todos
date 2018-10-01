@@ -15,4 +15,12 @@
     <string name="username_cant_empty">User name can\'t empty</string>
 
     <string name="please_checkout_the_username_password">Please check if the account password is set correctly.</string>
+    <string name="index">index</string>
+    <string name="edit">edit</string>
+    <string name="discover">discover</string>
+    <string name="online_content_start">online content start</string>
+
+    <string name="state_private">private</string>
+    <string name="state_check">checking</string>
+    <string name="state_public">public</string>
 </resources>

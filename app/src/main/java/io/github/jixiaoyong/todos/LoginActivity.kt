@@ -33,9 +33,9 @@ import kotlinx.android.synthetic.main.activity_login.*
  * email: jixiaoyong1995@gmail.com
  * website: www.jixiaoyong.github.io
  * date: 2018/9/29
- * description: todo
+ * description: 鉴权（登录/注册）页面
  */
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
 
     private lateinit var mDaoSession: DaoSession
     private lateinit var mUserDao: UserDao
@@ -56,9 +56,9 @@ class LoginActivity : AppCompatActivity() {
         val userQuery = mDaoSession.userDao.queryBuilder().build()
 
         //todo check the token
-//        if (userQuery.list().isNotEmpty() && userQuery.list()[0].token.isNotEmpty()) {
-//            go2MainActivity()
-//        }
+        if (userQuery.list().isNotEmpty() && userQuery.list()[0].token.isNotEmpty()) {
+            go2MainActivity(userQuery.list()[0].token)
+        }
 
         mTodosService = RetrofitManager.retrofit.create(TodosService::class.java)
 
@@ -136,9 +136,10 @@ class LoginActivity : AppCompatActivity() {
             result = true && result
         }
 
+        result = result && checkPassword(password, password_layout)
+
         //如果是注册的时候，才检查这些信息
         if (register_more_layout.visibility == View.VISIBLE) {
-            result = result && checkPassword(password, password_layout)
 
             result = result && checkPassword(confirm_password, confirm_password_layout)
 
@@ -173,25 +174,29 @@ class LoginActivity : AppCompatActivity() {
 
                     val t = msg.obj as ResultUserLogin
                     val user = User(t.data.username, t.data.date, t.data.token, t.data.email)
+                    mUserDao.deleteAll()
                     mUserDao.insert(user)
 
-                    go2MainActivity()
+                    go2MainActivity(t.data.token)
 
                 }
                 MSG_USER_REGISTER -> {
                     mDialog.dismiss()
                     val t = msg.obj as ResultUserRegister
                     val user = User(t.data.username, t.data.date, t.data.token, t.data.email)
+                    mUserDao.deleteAll()
                     mUserDao.insert(user)
 
-                    go2MainActivity()
+                    go2MainActivity(t.data.token)
                 }
             }
         }
     }
 
-    private fun go2MainActivity() {
-        startActivity(Intent(mContext, MainActivity::class.java))
+    private fun go2MainActivity(token: String) {
+        var intent = Intent(mContext, MainActivity::class.java)
+        intent.putExtra("token", token)
+        startActivity(intent)
         finish()
     }
 
