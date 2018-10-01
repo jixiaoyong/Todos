@@ -195,9 +195,9 @@ class ApiActivity : BaseActivity() {
 
                             mContentQuery = mContentDao.queryBuilder().build()
                             mContentQuery.list().map {
-                                mContents.add(ContentBean(it.date, it.user_id, it.tag, it.state,
-                                        it.conetnt_id, it.title,
-                                        it.content, it.url, it.username))
+//                                mContents.add(ContentBean(it.date, it.user_id, it.tag, it.state,
+//                                        it.conetnt_id, it.title,
+//                                        it.content, it.url, it.username))
                             }
                             result_rv.adapter?.notifyDataSetChanged()
                         }
