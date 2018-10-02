@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--<activity android:name=".PreActivity"-->
         <activity
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -27,8 +26,11 @@
 
         <activity android:name=".ApiActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".EditContentActivity" />
-        <activity android:name=".ViewContentActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".EditContentActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ViewContentActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

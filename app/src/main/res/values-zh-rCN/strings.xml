@@ -21,5 +21,10 @@
     <string name="state_private">私有</string>
     <string name="state_check">审核中</string>
     <string name="state_public">公开</string>
-
+    <string name="title_cant_empty">标题不能为空</string>
+    <string name="content_cant_empty">内容不能为空</string>
+    <string name="url_must_start_http_https">链接必须以“http://”或者“https://\"开头</string>
+    <string name="save_success">保存成功</string>
+    <string name="save_failed">保存失败</string>
+    <string name="add_tag">添加标签</string>
 </resources>

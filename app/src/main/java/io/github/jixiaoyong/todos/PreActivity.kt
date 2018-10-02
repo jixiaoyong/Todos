@@ -1,6 +1,8 @@
 package io.github.jixiaoyong.todos
 
 import android.os.Bundle
+import io.github.jixiaoyong.todos.widget.Toast
+import kotlinx.android.synthetic.main.activity_content_edit.*
 import kotlinx.android.synthetic.main.activity_content_view.*
 
 /**
@@ -14,9 +16,11 @@ class PreActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_content_view)
+        setContentView(R.layout.activity_content_edit)
 
-        web_view.loadUrl("https://ramen.gq")
+//        web_view.loadUrl("https://ramen.gq")
+
+
     }
 
 

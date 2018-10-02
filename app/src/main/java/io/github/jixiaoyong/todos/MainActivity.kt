@@ -71,6 +71,13 @@ class MainActivity : AppCompatActivity() {
         initView()
 
         bindEvent()
+
+        checkUpdate()
+    }
+
+    private fun checkUpdate() {
+
+        rxAndroidGo(mTodosService.appUpdate(BuildConfig.VERSION_CODE), MSG_APP_UPDATE)
     }
 
     private fun initView() {
@@ -159,7 +166,9 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 R.id.menu_edit -> {
-                    startActivity(Intent(mContext, EditContentActivity::class.java))
+                    var intent = Intent(mContext, EditContentActivity::class.java)
+                    intent.putExtra("token",mToken)
+                    startActivity(intent)
                 }
             }
 
@@ -167,11 +176,6 @@ class MainActivity : AppCompatActivity() {
             Log.d("TAG", "click on menu_discover ${it.itemId == R.id.menu_discover}")
             return@setOnNavigationItemSelectedListener true
         }
-
-//        rxAndroidGo(mTodosService.contentAdd(mToken, content_title.text.toString(),
-//                content_content.text.toString(), "http://www.ramen.gq", "", null),
-//                MSG_CONTENT_ADD)
-//        rxAndroidGo(mTodosService.contentDelete(mToken, mContentId), MSG_CONTENT_DELETE)
     }
 
     fun <T> rxAndroidGo(observable: Observable<T>, what: Int) {
@@ -209,6 +213,7 @@ class MainActivity : AppCompatActivity() {
     private val MSG_CONTENT_ADD = 0x008
     private val MSG_CONTENT_DELETE = 0x009
     private val MSG_CONTENT_UPDATE = 0x010
+    private val MSG_APP_UPDATE = 0x011
 
 
     val mHandler = @SuppressLint("HandlerLeak")
@@ -240,6 +245,9 @@ class MainActivity : AppCompatActivity() {
                     val t = msg.obj as HttpResult<ContentBean>
                     Log.d("TAG", "data is ${t.code} ${t.message} \n ${t.data.size}")
                     storeContents(t.data, mPublicContents, 2)
+
+                }
+                MSG_APP_UPDATE->{
 
                 }
             }

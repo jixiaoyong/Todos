@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="15dp"
+    android:orientation="vertical"
+    android:paddingTop="24dp">
+
+
+    <ImageView
+        android:id="@+id/title_ic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/book" />
+
+    <EditText
+        android:id="@+id/content_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/title_ic"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:hint="title"
+        android:singleLine="true"
+        android:padding="5dp"
+        android:textColor="@color/colorAppleBlue"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/tag_ic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/title_ic"
+        android:background="@drawable/ic_tag" />
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="tag"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@id/tag_ic"
+        android:background="@drawable/btn_bg_blue_normal"
+        android:maxLength="10"
+        android:maxWidth="250dp"
+        android:layout_marginTop="10dp"
+        android:padding="9dp"
+        android:layout_below="@id/title_ic"
+        android:text="tag"
+        android:textAlignment="textStart" />
+
+    <ImageButton
+        android:id="@+id/add_tag"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/title_ic"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_edit"
+        android:backgroundTint="@color/colorAppleBlue" />
+
+    <ImageView
+        android:id="@+id/url_ic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tag"
+        android:background="@drawable/ic_url" />
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bg_blue_normal"
+        android:hint="http://"
+        android:layout_toEndOf="@id/url_ic"
+        android:layout_below="@id/tag"
+        android:inputType="textUri"
+        android:padding="5dp"
+        android:textAlignment="textStart" />
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/url"
+        android:layout_marginTop="10dp"
+        android:inputType="textLongMessage"
+        android:background="@drawable/btn_bg_blue_normal"
+        android:gravity="top|left"
+        android:padding="5dp"
+        android:text="this is text" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:foreground="@drawable/ic_radio_button_2"
+        android:foregroundTint="#fff"
+        android:layout_width="50dp"
+        app:elevation="9dp"
+        android:layout_margin="5dp"
+        android:layout_height="50dp" />
+</RelativeLayout>

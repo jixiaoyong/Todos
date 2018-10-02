@@ -55,4 +55,8 @@ interface TodosService {
     @POST("content/delete")
     fun contentDelete(@Field("token") token: String,
                       @Field("content_id") contentId: Int): Observable<ResultContentDelete>
+
+    @FormUrlEncoded
+    @POST("app/update")
+    fun appUpdate(@Field("current_version_code") current_version_code: Int): Observable<ResultContentDelete>
 }

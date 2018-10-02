@@ -23,4 +23,12 @@
     <string name="state_private">private</string>
     <string name="state_check">checking</string>
     <string name="state_public">public</string>
+
+    <string name="add_tag">Add tag</string>
+    <string name="title_cant_empty">Title can\'t empty</string>
+    <string name="content_cant_empty">Content can\'t empty</string>
+    <string name="url_must_start_http_https">Url must start with "http://" or "https://"</string>
+
+    <string name="save_success">save failed</string>
+    <string name="save_failed">save failed</string>
 </resources>
