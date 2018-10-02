@@ -196,6 +196,7 @@ class LoginActivity : BaseActivity() {
     private fun go2MainActivity(token: String) {
         var intent = Intent(mContext, MainActivity::class.java)
         intent.putExtra("token", token)
+//        intent.putExtra("user_id", userId)
         startActivity(intent)
         finish()
     }

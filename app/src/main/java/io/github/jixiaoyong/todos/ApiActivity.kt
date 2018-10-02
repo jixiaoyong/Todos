@@ -37,7 +37,7 @@ class ApiActivity : BaseActivity() {
     private lateinit var mTodosService: TodosService
     private lateinit var mContext: Context
     private var mToken = ""
-    private var mContentId = 0
+    private var mContentId = 0L
 
     private var mContents = ArrayList<ContentBean>()
 
@@ -112,9 +112,9 @@ class ApiActivity : BaseActivity() {
                     MSG_CONTENT_ADD)
         }
 
-        delete_btn.setOnClickListener {
-            rxAndroidGo(mTodosService.contentDelete(mToken, mContentId), MSG_CONTENT_DELETE)
-        }
+//        delete_btn.setOnClickListener {
+//            rxAndroidGo(mTodosService.contentDelete(mToken, mContentId), MSG_CONTENT_DELETE)
+//        }
     }
 
     fun <T> rxAndroidGo(observable: Observable<T>, what: Int) {

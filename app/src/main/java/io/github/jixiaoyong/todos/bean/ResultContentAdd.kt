@@ -12,6 +12,6 @@ data class ResultContentAdd(@SerializedName("code")
 
 
 data class ContentAddResult(@SerializedName("content_id")
-                val contentId: Int = 0)
+                val contentId: Long = 0)
 
 

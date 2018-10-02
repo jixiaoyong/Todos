@@ -13,6 +13,7 @@
     <string name="password_cant_empty">Password can\'t empty</string>
     <string name="password_is_different">Password is different</string>
     <string name="username_cant_empty">User name can\'t empty</string>
+    <string name="please_login_agagin">Authentication failure,please login</string>
 
     <string name="please_checkout_the_username_password">Please check if the account password is set correctly.</string>
     <string name="index">index</string>
@@ -31,4 +32,14 @@
 
     <string name="save_success">save failed</string>
     <string name="save_failed">save failed</string>
+
+    <string name="delete">Delete</string>
+    <string name="delete_confirm_str">Are you sure to delete this content?</string>
+    <string name="delete_success">delete success</string>
+    <string name="delete_failed">delete failed</string>
+
+    <string name="version">Version</string>
+    <string name="update_info">Update infos</string>
+    <string name="new_version_coming">We have a new version</string>
+    <string name="download_new_version">Try it NOW!</string>
 </resources>

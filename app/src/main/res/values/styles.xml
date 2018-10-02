@@ -3,8 +3,8 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorAppleBlue</item>
+        <item name="colorPrimaryDark">@color/colorAppleBlue</item>
         <item name="colorAccent">@color/colorAppleBlue</item>
 
         <!-- 如果使用了下面两个属性，状态栏颜色变为android:statusBarColor，colorPrimaryDark 被覆盖 -->
@@ -16,6 +16,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
 
     <style name="ButtonIphoneStyle" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:textSize">22sp</item>
